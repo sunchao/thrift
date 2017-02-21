@@ -29,14 +29,13 @@ mod buffered;
 mod framed;
 mod passthru;
 mod socket;
-
-#[cfg(test)]
-pub mod mem;
+mod mem;
 
 pub use self::buffered::{TBufferedTransport, TBufferedTransportFactory};
 pub use self::framed::{TFramedTransport, TFramedTransportFactory};
 pub use self::passthru::TPassThruTransport;
 pub use self::socket::TTcpTransport;
+pub use self::mem::TBufferTransport;
 
 /// Identifies an I/O channel that can be used to send and receive bytes.
 pub trait TTransport: io::Read + io::Write {}
