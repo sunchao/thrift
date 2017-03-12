@@ -29,7 +29,7 @@ mod buffered;
 mod framed;
 mod passthru;
 mod socket;
-mod mem;
+pub mod mem;
 
 pub use self::buffered::{TBufferedTransport, TBufferedTransportFactory};
 pub use self::framed::{TFramedTransport, TFramedTransportFactory};
